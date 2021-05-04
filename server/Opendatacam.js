@@ -631,6 +631,10 @@ module.exports = {
 
   // Listen to 8070 for Tracker data detections
   listenToYOLO(urlData) {
+
+    console.log("In listenToYOLO -hadleigh")
+
+
     var self = this;
     // HTTPJSONSTREAM req
     if(Opendatacam.isListeningToYOLO) {
