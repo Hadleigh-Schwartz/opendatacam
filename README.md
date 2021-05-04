@@ -1,5 +1,7 @@
 # OpenDataCam 3.0.1 – An open source tool to quantify the world
 
+Hadleigh's Version for testing
+
 OpenDataCam is an open source tool to quantify the world. It quantifies and tracks moving objects with live video analysis. It is designed to be an accessible, affordable and open-source solution to better understand interactions in urban environments.
 
 OpenDataCam never records any photo or video data. The system only saves surveyed meta-data, in particular the path an object moved or number of counted objects at a certain point. The novelty of OpenDataCam is, that everything happens on location, while no visual data is saved or sent to online cloud processing.
