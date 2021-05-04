@@ -64,7 +64,7 @@ function docker_compose_setup() {
   command -v docker-compose >/dev/null 2>&1 || { echo >&2 "OpenDataCam requires docker-compose, please install and retry"; }
 
   # Get the docker compose file
-  wget -N https://raw.githubusercontent.com/opendatacam/opendatacam/$VERSION/docker/run/$PLATFORM/docker-compose.yml
+  wget -N https://raw.githubusercontent.com/Hadleigh-Schwartz/opendatacam/$VERSION/docker/run/$PLATFORM/docker-compose.yml
 
   echo "Download, install and run opendatacam docker container"
   sudo docker-compose up -d
@@ -137,7 +137,7 @@ echo "Installing OpenDataCam $VERSION for platform: $2 ..."
 if [ ! -f ./config.json ]; then
     # Get the config file
     echo "Download config file ..."
-    wget -N https://raw.githubusercontent.com/opendatacam/opendatacam/$VERSION/config.json
+    wget -N https://raw.githubusercontent.com/Hadleigh-Schwartz/opendatacam/$VERSION/config.json
 
     # Replace VIDEO_INPUT and NEURAL_NETWORK with default config for this platform
     VIDEO_INPUT=${DEFAUT_VIDEO_INPUT_OPTIONS[$INDEX]}
