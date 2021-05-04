@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y jq wget
 
 # Start Darknet Install
-RUN git clone --depth 1 -b odc https://github.com/opendatacam/darknet /var/local/darknet
+RUN git clone --depth 1 -b odc https://github.com/Hadleigh-Schwartz/darknet /var/local/darknet
 
 WORKDIR /var/local/darknet
 
@@ -19,13 +19,13 @@ RUN make
 COPY yolov4.weights yolov4.weights
 
 # Include demo.mp4 file
-RUN mkdir opendatacam_videos && cd opendatacam_videos && wget https://github.com/opendatacam/opendatacam/raw/development/public/static/demo/demo.mp4
+RUN mkdir opendatacam_videos && cd opendatacam_videos && wget https://github.com/Hadleigh-Schwartz/opendatacam/raw/development/public/static/demo/demo.mp4
 
 # Install node.js
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt-get install -y nodejs
 
-RUN git clone --depth 1 -b v3.0.1 https://github.com/opendatacam/opendatacam /var/local/opendatacam
+RUN git clone --depth 1 -b v3.0.1 https://github.com/Hadleigh-Schwartz/opendatacam /var/local/opendatacam
 
 WORKDIR /var/local/opendatacam
 
